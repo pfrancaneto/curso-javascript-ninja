@@ -48,7 +48,7 @@ Crie uma função com as seguintes características:
 */
 function Multi(x, y, z) {
     if(x, y, z) {
-        return x * y * z + 5;
+        return x * y * z + 2;
     } else {
         return 'Preencha todos os valores corretamente!';
     }
@@ -64,7 +64,7 @@ Multi(10, 2);
 Multi(10, 2, 1);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-25
+22
 
 /*
 Crie uma função com as seguintes características:
@@ -75,8 +75,25 @@ Crie uma função com as seguintes características:
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
-?
+function tresArgumentos(a, b, c) {
+    if(a !== undefined && b === undefined && c === undefined) {
+        return a;
+    } else if(a !== undefined && b !== undefined && c === undefined) {
+        return a + b;
+    } else if(a !== undefined && b !== undefined && c !== undefined) {
+        return (a + b) / c;
+    } else if (a === undefined && b === undefined && c === undefined) {
+        return false;
+    } return null;
+}
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-?
+tresArgumentos(10)
+10
+tresArgumentos(10,2)
+12
+tresArgumentos(10,20,30)
+1
+tresArgumentos()
+false
 ```
